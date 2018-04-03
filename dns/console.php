@@ -10,7 +10,23 @@ class DB {
 DB::$sql = new mysql($dbhost, $dbuser, $dbpassword, $dbname);
 //DB::$conn->query(...);
 
+class XE{
+define('__ZBXE__',true);
+require_once("./config/config.inc.php");
+$oContext = &Context::getInstance();
+$oContext->init();
 
+    public static $no = $logged_info->member_srl;
+    public static $id = $logged_info->user_id;
+    public static $name = $logged_info->user_name;
+    public static $nick = $logged_info->nick_name;
+    public static $email = $logged_info->email_address;
+    public static $home = $logged_info->homepage;
+    public static $birth = $logged_info->birthday;
+    public static $is_admin = $logged_info->is_admin;
+    
+}
+// XE::$no 
 
 /* RECORD TYPE GET*/
 $type = $_GET['type'];
