@@ -1,20 +1,19 @@
 <?php
+/*DB 연결*/
 $dbhost = "";
 $dbuser = "";
 $dbpassword = "";
 $dbname = "";
-
-$type = $_GET['type'];
-
-
 class DB {
     public static $sql;
 }
-
-/*DB 연결*/
 DB::$sql = new mysql($dbhost, $dbuser, $dbpassword, $dbname);
- // DB::$conn->query(...);
+//DB::$conn->query(...);
 
+
+
+/* RECORD TYPE GET*/
+$type = $_GET['type'];
 
 function A(){
   $command = $_GET['command'];
