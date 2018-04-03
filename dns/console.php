@@ -7,13 +7,13 @@ $dbname = "";
 $type = $_GET['type'];
 
 
-class DBi {
+class DB {
     public static $sql;
 }
 
 /*DB 연결*/
-DBi::$sql = new mysql($dbhost, $dbuser, $dbpassword, $dbname);
- // DBi::$conn->query(...);
+DB::$sql = new mysql($dbhost, $dbuser, $dbpassword, $dbname);
+ // DB::$conn->query(...);
 
 
 function A(){
