@@ -6,8 +6,15 @@ $dbname = "";
 
 $type = $_GET['type'];
 
+
+class DBi {
+    public static $sql;
+}
+
 /*DB 연결*/
-$sql = new mysql($dbhost, $dbuser, $dbpassword, $dbname);
+DBi::$sql = new mysql($dbhost, $dbuser, $dbpassword, $dbname);
+  
+
 
 function A(){
   $command = $_GET['command'];
