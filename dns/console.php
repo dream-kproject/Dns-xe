@@ -13,7 +13,7 @@ class DBi {
 
 /*DB 연결*/
 DBi::$sql = new mysql($dbhost, $dbuser, $dbpassword, $dbname);
-  
+ // DBi::$conn->query(...);
 
 
 function A(){
