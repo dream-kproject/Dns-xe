@@ -6,10 +6,12 @@ $dbpassword = "";
 $dbname = "";
 class DB {
     public static $sql;
+    DB::$sql = new mysql($dbhost, $dbuser, $dbpassword, $dbname);
+    //DB::$sql->query(...);
 }
-DB::$sql = new mysql($dbhost, $dbuser, $dbpassword, $dbname);
-//DB::$conn->query(...);
 
+
+/*XE 연동*/
 class XE{
     define('__ZBXE__',true);
     require_once("./config/config.inc.php");
@@ -23,9 +25,9 @@ class XE{
     public static $home = $logged_info->homepage;
     public static $birth = $logged_info->birthday;
     public static $is_admin = $logged_info->is_admin;
+    //DB::$nick;
     
 }
-// XE::$no 
 
 /* RECORD TYPE GET*/
 $type = $_GET['type'];
