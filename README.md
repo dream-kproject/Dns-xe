@@ -6,4 +6,4 @@ XE + 외부페이지 이용한 DNS console<br>
 DNSCMD localhost(servername) /RecordAdd $zonename $hosts A $ipaddress
 <br>
 ## MX 레코드 관련
-DNSCMD localhost(servername) /RecordAdd $zonename $hosts A $ipaddress
+DNSCMD localhost(servername) /RecordAdd $zonename $hosts mx $mxaddress
